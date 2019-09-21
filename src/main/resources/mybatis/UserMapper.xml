@@ -7,5 +7,8 @@
     -->
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="passwrod" jdbcType="VARCHAR" property="passwrod" />
+    <result column="jiaose" jdbcType="VARCHAR" property="jiaose" />
+    <result column="quanxian" jdbcType="VARCHAR" property="quanxian" />
   </resultMap>
 </mapper>

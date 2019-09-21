@@ -1,10 +1,13 @@
 package com.example.demo;
 
-import org.mybatis.spring.annotation.MapperScan;
+import tk.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@MapperScan("com.example.demo")
+/**
+*  特别注意这个里的MapperScan() 的注解使用的是 import tk.mybatis.spring.annotation.MapperScan;
+* */
+@MapperScan("com.example.demo.mapper")
 @SpringBootApplication
 public class DemoApplication {
 

@@ -15,9 +15,8 @@ public class userservice {
     @Autowired
     UserMapper  userMapper;
 
-
     @SelectProvider(type = BaseSelectProvider.class, method = "dynamicSQL")
-    public List<User> selectAll() {
-        return userMapper.selectAll();
+    public List<User> select(User user) {
+        return userMapper.select(user);
     }
 }
