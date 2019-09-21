@@ -1,0 +1,23 @@
+server:
+  port: 8010
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: liu
+    password: Liu1988226
+    url: jdbc:mysql://cdb-kx7bfwy2.bj.tencentcdb.com:10187/mybatistest?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+
+
+mybatis:
+  type-aliases-package: com.example.demo.entity
+  mapper-locations: mybatis/*.xml
+
+
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countsql
+
