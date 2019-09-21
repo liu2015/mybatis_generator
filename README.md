@@ -4,3 +4,5 @@
 
 也使用了tk.mybatis 自动生成常用sql方法
 
+配置pom,相关mybatis分页插件
+pagehelper 
