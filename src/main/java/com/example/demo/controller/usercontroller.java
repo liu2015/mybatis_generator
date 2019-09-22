@@ -1,6 +1,5 @@
 package com.example.demo.controller;
 
-import com.example.demo.entity.User;
 import com.example.demo.service.userservice;
 import org.apache.ibatis.annotations.SelectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
