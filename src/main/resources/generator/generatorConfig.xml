@@ -20,20 +20,23 @@
         </plugin>
 
         <!-- 配置数据库连接 -->
+
         <jdbcConnection
                 driverClass="${jdbc.driverClass}"
                 connectionURL="${jdbc.connectionURL}"
                 userId="${jdbc.username}"
                 password="${jdbc.password}">
-<!--                <property name="nullCatalogMeansCurrent" value="true" />-->
-<!--            <property name="nullCatalogMeansCurrent" value="true" />-->
+<!--                        <property name="nullCatalogMeansCurrent" value="true" />-->
+<!--            这条语句好像没有生效-->
+        <property name="nullCatalogMeansCurrent" value="true"/>
 
         </jdbcConnection>
 
+
         <!-- 配置实体类存放路径 -->
         <javaModelGenerator targetPackage="com.example.demo.entity" targetProject="src/main/java">
-<!--            <property name="enableSubPackages" value="false"/>-->
-<!--            <property name="trimStrings" value="true"/>-->
+            <!--            <property name="enableSubPackages" value="false"/>-->
+            <!--            <property name="trimStrings" value="true"/>-->
         </javaModelGenerator>
 
         <!-- 配置 XML 存放路径 -->
@@ -45,18 +48,12 @@
                 targetProject="src/main/java"
                 type="XMLMAPPER"/>
 
-        <!-- 配置需要指定生成的数据库和表，% 代表所有表 -->
-        <table catalog="mybatistest" tableName="%">
-
+<!--         配置需要指定生成的数据库和表，% 代表所有表-->
+        <table catalog="mybatistest"  tableName="%">
+<!--            catalog="mybatistest"-->
             <!-- 默认为false，如果设置为true，在生成的SQL中，table名字不会加上catalog或schema； true 不会生成@Table(name = "mybatistest..user") -->
-            <property name="ignoreQualifiersAtRuntime" value="false"/>
-
-
+            <property name="ignoreQualifiersAtRuntime" value="true"/>
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
-
-
-
-
     </context>
 </generatorConfiguration>

@@ -13,7 +13,7 @@ import java.util.List;
 public class userservice {
 
     @Autowired
-    UserMapper  userMapper;
+    UserMapper userMapper;
 
     @SelectProvider(type = BaseSelectProvider.class, method = "dynamicSQL")
     public List<User> select(User user) {

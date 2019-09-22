@@ -11,9 +11,10 @@ spring:
 
 
 mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   type-aliases-package: com.example.demo.entity
   mapper-locations: classpath:mybatis/*Mapper.xml
-mapp
 
 pagehelper:
   helper-dialect: mysql
