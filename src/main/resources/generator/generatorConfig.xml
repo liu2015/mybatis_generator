@@ -20,7 +20,7 @@
         </plugin>
 
         <!-- 配置数据库连接 -->
-
+        <!--这里可以是用直接填写的方式，省去jdbc.properties文件-->
         <jdbcConnection
                 driverClass="${jdbc.driverClass}"
                 connectionURL="${jdbc.connectionURL}"

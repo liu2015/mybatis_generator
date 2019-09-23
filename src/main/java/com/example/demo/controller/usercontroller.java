@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import com.example.demo.entity.User;
 import com.example.demo.service.userservice;
 import org.apache.ibatis.annotations.SelectProvider;
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import tk.mybatis.mapper.provider.base.BaseSelectProvider;
 
 import java.util.List;
-import java.util.logging.Logger;
+
 
 @Controller
 public class usercontroller {
@@ -27,9 +28,11 @@ public String login(){
     @SelectProvider(type = BaseSelectProvider.class, method = "dynamicSQL")
     public String select(User user) {
 
-  Logger logger= (Logger) LoggerFactory.getLogger(this.getClass());
+  Logger logger=  LoggerFactory.getLogger(this.getClass());
+
 
   logger.info("这是info级别");
+  logger.debug( "debug" );
 
 
 
